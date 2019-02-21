@@ -2,3 +2,5 @@ node_modules
 lib/
 pyvenv.cfg
 bin/
+pip-selfcheck.json
+db.sqlite3
