@@ -6,3 +6,5 @@ pip-selfcheck.json
 db.sqlite3
 .DS_Store
 __pycache__
+bundle.js
+bundle.js.map

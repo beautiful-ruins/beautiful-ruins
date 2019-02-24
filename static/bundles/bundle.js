@@ -86,6 +86,26 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/user_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/user_actions.js ***!
+  \******************************************/
+/*! exports provided: receiveCurrentUser */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveCurrentUser", function() { return receiveCurrentUser; });
+var RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
+var receiveCurrentUser = function receiveCurrentUser(user) {
+  return {
+    type: RECEIVE_CURRENT_USER,
+    user: user
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/app.jsx":
 /*!**************************!*\
   !*** ./frontend/app.jsx ***!
@@ -140,11 +160,35 @@ document.addEventListener('DOMContentLoaded', function () {
   var root = document.getElementById('root');
   var preloadedState = {};
   var store = Object(_store__WEBPACK_IMPORTED_MODULE_2__["default"])(preloadedState);
-  debugger;
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Root, {
     store: store
   }), root);
+  window.getState = store.getState;
 });
+
+/***/ }),
+
+/***/ "./frontend/reducers/cart.js":
+/*!***********************************!*\
+  !*** ./frontend/reducers/cart.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var cartReducer = function cartReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (cartReducer);
 
 /***/ }),
 
@@ -158,11 +202,56 @@ document.addEventListener('DOMContentLoaded', function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _session__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./session */ "./frontend/reducers/session.js");
+/* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cart */ "./frontend/reducers/cart.js");
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  entities: [],
-  session: []
+  entities: Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+    cart: _cart__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }),
+  session: _session__WEBPACK_IMPORTED_MODULE_1__["default"]
 }));
+
+/***/ }),
+
+/***/ "./frontend/reducers/session.js":
+/*!**************************************!*\
+  !*** ./frontend/reducers/session.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/user_actions */ "./frontend/actions/user_actions.js");
+
+
+var sessionReducer = function sessionReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+    currentUser: null
+  };
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
+      return {
+        currentUser: action.user.id
+      };
+
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_CURRENT_USER"]:
+      return {
+        currentUser: null
+      };
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (sessionReducer);
 
 /***/ }),
 
