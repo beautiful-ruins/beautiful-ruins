@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let preloadedState = {};
     const store = configureStore(preloadedState);
     ReactDOM.render(<Root store={store} />, root);
-
-    window.getState = store.getState;
+    // run for feather icons
     window.feather.replace();
+    // TEST
+    window.getState = store.getState;
 });
