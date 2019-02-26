@@ -1,0 +1,23 @@
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 150px;
+}
+
+.logo {
+    height: 100px;
+}
+
+.nav-icons-container {
+    width: 100px;
+    padding-right: 8px;
+}
+
+.nav-icons-container ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

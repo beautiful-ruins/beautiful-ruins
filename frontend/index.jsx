@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import configureStore from './store';
 import App from './app';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+require('./style.scss');
 
 const Root = ({store}) => {
     return(
         <Provider store={store}>
-            <App />
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
         </Provider>
     );
 };
@@ -19,5 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Root store={store} />, root);
 
     window.getState = store.getState;
-    
+    window.feather.replace();
 });

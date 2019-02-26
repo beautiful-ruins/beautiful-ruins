@@ -1,8 +1,15 @@
 import React from 'react';
+import { AuthRoute, ProtectedRoute } from './util/route_util';
+import { Switch } from 'react-router-dom';
+import HomePage from './components/homepage';
 
 const App = () => {
     return(
-        <h1>Hello from React!</h1>
+        <>
+            <Switch>
+                <AuthRoute exact path="/" component={HomePage} />
+            </Switch>
+        </>
     );
 };
 

@@ -1,5 +1,5 @@
 {% load render_bundle from webpack_loader %}
-
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +8,9 @@
         <title>Beautiful Ruins</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% render_bundle 'main' %}
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />
     </head>
     <body>
         <div id="root">React will render here</div>
