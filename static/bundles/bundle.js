@@ -258,9 +258,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var store = Object(_store__WEBPACK_IMPORTED_MODULE_2__["default"])(preloadedState);
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Root, {
     store: store
-  }), root);
+  }), root); // run for feather icons
+
+  window.feather.replace(); // TEST
+
   window.getState = store.getState;
-  window.feather.replace();
 });
 
 /***/ }),
