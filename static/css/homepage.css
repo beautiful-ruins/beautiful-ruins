@@ -21,3 +21,41 @@
     justify-content: space-around;
     align-items: center;
 }
+
+#content { 
+    padding: 10px
+    width: 800px;  
+}
+
+#side-nav {
+    float:left
+     width: 180px;
+}
+
+#side-nav ul {
+    
+}
+
+#top {
+    float:right
+    width:600; 
+}
+
+#middle {
+    float:right
+     width:600; 
+}
+
+#bottom {
+    float:right
+    width:600; 
+}
+
+#footer {
+    clear: both;
+}
+
+a {
+    text decorations: none;
+}
+    
