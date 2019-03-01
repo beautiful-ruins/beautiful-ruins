@@ -23,23 +23,25 @@ class HomePage extends React.Component {
                 </nav>
             </header>
             <main>
-                <div id="content">
-                            <div id="nav">
-                            
-                            </div>
+                <div id="content"/>
+                    <div id="side-nav">
+                        <ul>
+                            <l1> Blend You </l1>
+                            <l2> Signature Blends </l2>
+                     </div>
                     
-                            <div id="top">
-                                <img scr="static/images/scrollpic.jpg" width="560" alt="scroll picture"/>
-                                <h1> BE YOU, BLEND YOU </h1>
-                            </div>
+                     <div id="top">
+                             <img scr="static/images/scrollpic.jpg" width="560" alt="scroll picture"/>
+                             <h1> BE YOU, BLEND YOU </h1>
+                      </div>
                     
-                            <div id="middle">
-                                <h2> What Are You Nourishing? </h2>
-                            </div>
+                      <div id="middle">
+                              <h2> What Are You Nourishing? </h2>
+                      </div>
                     
-                            <div id="bottom">
+                      <div id="bottom">
                                 
-                            </div>
+                       </div>
                       
             </main>
             <footer>
