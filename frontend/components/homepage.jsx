@@ -23,7 +23,24 @@ class HomePage extends React.Component {
                 </nav>
             </header>
             <main>
-                <h1>Welcome to Beautiful Ruins</h1>
+                <div id="content">
+                            <div id="nav">
+                            
+                            </div>
+                    
+                            <div id="top">
+                                
+                                <h1> BE YOU, BLEND YOU </h1>
+                            </div>
+                    
+                            <div id="middle">
+                                <h2> What Are You Nourishing? </h2>
+                            </div>
+                    
+                            <div id="bottom">
+                                
+                            </div>
+                      
             </main>
             <footer>
                 <span>&copy; 2019 Beautiful Ruins LLP. All rights reserved.</span>
