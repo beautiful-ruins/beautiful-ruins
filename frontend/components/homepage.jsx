@@ -29,7 +29,7 @@ class HomePage extends React.Component {
                             </div>
                     
                             <div id="top">
-                                
+                                <img scr="static/images/scrollpic.jpg/>
                                 <h1> BE YOU, BLEND YOU </h1>
                             </div>
                     
